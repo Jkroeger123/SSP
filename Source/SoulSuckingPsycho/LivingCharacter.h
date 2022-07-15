@@ -5,16 +5,16 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
 #include "GameFramework/Pawn.h"
-#include "ThirdPersonCharacter.generated.h"
+#include "LivingCharacter.generated.h"
 
 UCLASS()
-class SOULSUCKINGPSYCHO_API AThirdPersonCharacter : public ACharacter
+class SOULSUCKINGPSYCHO_API ALivingCharacter : public ACharacter
 {
 	GENERATED_BODY()
 
 public:
 	// Sets default values for this character's properties
-	AThirdPersonCharacter();
+	ALivingCharacter();
 
 protected:
 	// Called when the game starts or when spawned

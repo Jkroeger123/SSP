@@ -1,10 +1,10 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 
-#include "ThirdPersonCharacter.h"
+#include "LivingCharacter.h"
 
 // Sets default values
-AThirdPersonCharacter::AThirdPersonCharacter()
+ALivingCharacter::ALivingCharacter()
 {
  	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
@@ -12,21 +12,21 @@ AThirdPersonCharacter::AThirdPersonCharacter()
 }
 
 // Called when the game starts or when spawned
-void AThirdPersonCharacter::BeginPlay()
+void ALivingCharacter::BeginPlay()
 {
 	Super::BeginPlay();
-	UE_LOG(LogTemp, Warning, TEXT("fuck"));
+
 }
 
 // Called every frame
-void AThirdPersonCharacter::Tick(float DeltaTime)
+void ALivingCharacter::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
 }
 
 // Called to bind functionality to input
-void AThirdPersonCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
+void ALivingCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 
