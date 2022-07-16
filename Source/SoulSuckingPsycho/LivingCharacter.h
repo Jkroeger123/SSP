@@ -52,6 +52,7 @@ public:
 	void WaitForStaminaRecharge_Implementation() override;
 	void SetShouldRechargeStamina_Implementation() override;
 	void SpendStamina_Implementation(float StaminaCost) override;
+	bool CanSpendStamina_Implementation() override;
 
 
 };

@@ -60,10 +60,16 @@ void ALivingCharacter::SetShouldRechargeStamina_Implementation()
 	ShouldRechargeStamina = true;
 }
 
+bool ALivingCharacter::CanSpendStamina_Implementation()
+{
+	return (DashStamCost < CurrentStamina);
+}
+
 void ALivingCharacter::SpendStamina_Implementation(float StaminaCost)
 {
 	if (CurrentStamina < DashStamCost) return;
 	CurrentStamina -= DashStamCost;
 	WaitForStaminaRecharge_Implementation();
 }
+
 //End Interface Functions---------------------------------------------------------------------------------------------------------------------------------------------------------------

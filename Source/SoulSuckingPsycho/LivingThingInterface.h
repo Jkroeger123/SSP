@@ -33,4 +33,6 @@ public:
 	void SetShouldRechargeStamina();
 	UFUNCTION(BlueprintCallable, BlueprintNativeEvent, Category = LivingThingFunctions)
 	void SpendStamina(float StaminaCost);
+	UFUNCTION(BlueprintCallable, BlueprintNativeEvent, Category = LivingThingFunctions)
+	bool CanSpendStamina();
 };
