@@ -14,6 +14,7 @@ class SOULSUCKINGPSYCHO_API ALivingCharacter : public ACharacter, public ILiving
 	GENERATED_BODY()
 
 public:
+	UPROPERTY()
 	FTimerHandle StamTimerHandle;
 
 	bool ShouldRechargeStamina = false;
@@ -48,6 +49,7 @@ public:
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
 	void CustomTakeDamage_Implementation(float Damage) override;
+	void CustomHeal_Implementation(float HealthRegained) override;
 	void RechargeStamina_Implementation(float deltatime) override;
 	void WaitForStaminaRecharge_Implementation() override;
 	void SetShouldRechargeStamina_Implementation() override;

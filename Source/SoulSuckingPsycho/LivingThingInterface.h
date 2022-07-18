@@ -26,6 +26,8 @@ public:
 	UFUNCTION(BlueprintCallable, BlueprintNativeEvent, Category = LivingThingFunctions)
 	void CustomTakeDamage(float Damage);
 	UFUNCTION(BlueprintCallable, BlueprintNativeEvent, Category = LivingThingFunctions)
+	void CustomHeal(float HealthRegained);
+	UFUNCTION(BlueprintCallable, BlueprintNativeEvent, Category = LivingThingFunctions)
 	void RechargeStamina(float DeltaTime);
 	UFUNCTION(BlueprintCallable, BlueprintNativeEvent, Category = LivingThingFunctions)
 	void WaitForStaminaRecharge();

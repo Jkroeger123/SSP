@@ -35,6 +35,13 @@ void ALivingCharacter::CustomTakeDamage_Implementation(float Damage)
 	CurrentHealth -= Damage;
 }
 
+void ALivingCharacter::CustomHeal_Implementation(float HealthRegained)
+{
+	if (CurrentHealth >= MaxHealth) return;
+	CurrentHealth += HealthRegained;
+	if (CurrentHealth > MaxHealth) CurrentHealth = MaxHealth;
+}
+
 void ALivingCharacter::WaitForStaminaRecharge_Implementation()
 {
 	ShouldRechargeStamina = false;
@@ -50,7 +57,6 @@ void ALivingCharacter::RechargeStamina_Implementation(float DeltaTime)
 		ShouldRechargeStamina = false;
 		return;
 	}
-
 	CurrentStamina += StaminaPerSecond * DeltaTime;
 }
 
